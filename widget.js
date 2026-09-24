@@ -1,7 +1,8 @@
 // Create the Report Issue button
-const reportButton = document.createElement('button');
+const reportButton = document.createElement('img');
 
 reportButton.src = 'https://wankim00.github.io/widget-spike/logo.png';
+reportButton.alt = 'Report Issue';
 
 reportButton.style.position = 'fixed';
 reportButton.style.right = '20px';
@@ -22,7 +23,7 @@ const popup = document.createElement('div');
 
 popup.style.position = 'fixed';
 popup.style.right = '20px';
-popup.style.bottom = '80px';
+popup.style.bottom = '100px';
 popup.style.width = '300px';
 popup.style.padding = '20px';
 popup.style.background = 'white';
