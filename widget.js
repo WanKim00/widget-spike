@@ -10,6 +10,10 @@ reportButton.style.width = '60px';
 reportButton.style.height = '60px';
 reportButton.style.cursor = 'pointer';
 reportButton.style.objectFit = 'contain';
+reportButton.style.borderRadius = '50%';
+reportButton.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+reportButton.style.background = 'white';
+reportButton.style.padding = '8px';
 
 document.body.appendChild(reportButton);
 
@@ -18,7 +22,7 @@ const popup = document.createElement('div');
 
 popup.style.position = 'fixed';
 popup.style.right = '20px';
-popup.style.bottom = '70px';
+popup.style.bottom = '80px';
 popup.style.width = '300px';
 popup.style.padding = '20px';
 popup.style.background = 'white';
