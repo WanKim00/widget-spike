@@ -66,14 +66,37 @@ reportButton.addEventListener('click', () => {
 });
 
 // Test submit
-document.getElementById('submit-issue').addEventListener('click', () => {
+document.getElementById('submit-issue').addEventListener('click', async () => {
   const title = document.getElementById('issue-title').value;
-
   const description = document.getElementById('issue-description').value;
 
-  console.log('New Issue');
-  console.log('Title:', title);
-  console.log('Description:', description);
+  try {
+    const response = await fetch('http://localhost:3000/api/issues', {
+      method: 'POST',
 
-  alert('Issue submitted!');
+      headers: {
+        'Content-Type': 'application/json',
+      },
+
+      body: JSON.stringify({
+        title: title,
+        description: description,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      console.error(data);
+      alert('Failed to create issue.');
+      return;
+    }
+
+    console.log('Issue created:', data);
+
+    alert(`Issue #${data.issueNumber} created successfully!`);
+  } catch (error) {
+    console.error(error);
+    alert('Failed to connect to the server.');
+  }
 });
