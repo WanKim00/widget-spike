@@ -1,13 +1,15 @@
 // Create the Report Issue button
 const reportButton = document.createElement('button');
 
-reportButton.innerText = 'Report Issue';
+reportButton.src = 'https://wankim00.github.io/widget-spike/logo.png';
 
 reportButton.style.position = 'fixed';
 reportButton.style.right = '20px';
 reportButton.style.bottom = '20px';
-reportButton.style.padding = '12px 18px';
+reportButton.style.width = '60px';
+reportButton.style.height = '60px';
 reportButton.style.cursor = 'pointer';
+reportButton.style.objectFit = 'contain';
 
 document.body.appendChild(reportButton);
 
